@@ -14,3 +14,5 @@ Install Jmeter on EC2 :
 Install Jmeter Plugin in Jenkins
 
 Plugin Name : Performance
+
+*** Place your "ypur_test_plan.jmx" in the /var/lib/jenkins/workspace/job1 
