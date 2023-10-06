@@ -15,4 +15,4 @@ Install Jmeter Plugin in Jenkins
 
 Plugin Name : Performance
 
-*** Place your "ypur_test_plan.jmx" in the /var/lib/jenkins/workspace/job1 
+*** Place your "your_test_plan.jmx" in the /var/lib/jenkins/workspace/job1 
