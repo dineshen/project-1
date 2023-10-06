@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', credentialsId: 'git_sharath', url: 'https://github.com/sharath71/bottomline.git'
+                // Check out your source code repository here
+                // For example, if using Git:
+                // git url: 'your_repo_url'
+            }
+        }
+
+        stage('Run JMeter Tests') {
+            steps {
+                // Assuming you have a JMeter test plan file named 'your_test_plan.jmx' in your project directory
+                // You would run JMeter using the 'jmeter' command
+                sh '/opt/jmeter/bin/jmeter -n -t your_test_plan.jmx -l test_results.jtl'
+
+                // The '-n' flag runs JMeter in non-GUI mode
+                // '-t' specifies the test plan file
+                // '-l' specifies the test results file
+            }
+        }
+     }   
+ }
