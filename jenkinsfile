@@ -22,5 +22,11 @@ pipeline {
                 // '-l' specifies the test results file
             }
         }
+stage('Publish JMeter Results') {
+            steps {
+                // Publish JMeter test results using the Performance Plugin
+                perfReport percentiles: '0,50,90,95,99', sourceDataFiles: 'test_results.jtl'
+            }
+        }
      }   
  }
